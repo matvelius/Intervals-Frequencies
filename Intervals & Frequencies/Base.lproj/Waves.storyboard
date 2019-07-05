@@ -120,8 +120,12 @@
                                             <action selector="intervalSegmentedControl:" destination="teX-fR-JW0" eventType="valueChanged" id="fvr-Mj-1la"/>
                                         </connections>
                                     </segmentedControl>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oGx-ty-pcW" customClass="AKNodeOutputPlot" customModule="AudioKitUI">
+                                        <rect key="frame" x="0.0" y="258.5" width="320" height="202"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="jJ9-df-2jT" userLabel="Interval Frequency Stack">
-                                        <rect key="frame" x="46" y="258.5" width="228" height="24"/>
+                                        <rect key="frame" x="46" y="480" width="228" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interval Frequency:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cF-qz-LYy">
                                                 <rect key="frame" x="0.0" y="0.0" width="155.5" height="24"/>
@@ -137,8 +141,8 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="kd2-so-GNQ" userLabel="Ratio Stack">
-                                        <rect key="frame" x="107.5" y="302" width="105" height="24"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="kd2-so-GNQ" userLabel="Ratio Stack">
+                                        <rect key="frame" x="107.5" y="524" width="105" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ratio:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hon-WF-wuV">
                                                 <rect key="frame" x="0.0" y="0.0" width="47.5" height="24"/>
@@ -154,10 +158,6 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oGx-ty-pcW" customClass="AKNodeOutputPlot" customModule="AudioKitUI">
-                                        <rect key="frame" x="0.0" y="346" width="320" height="202"/>
-                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="P4W-Uj-wUD" secondAttribute="trailing" id="4Zm-id-ORV"/>
@@ -169,7 +169,7 @@
                         <constraints>
                             <constraint firstItem="zBY-j2-7Ld" firstAttribute="leading" secondItem="V9n-Hv-6ja" secondAttribute="leading" id="2pQ-E8-7Vr"/>
                             <constraint firstAttribute="trailing" secondItem="zBY-j2-7Ld" secondAttribute="trailing" id="7xw-kK-3Lk"/>
-                            <constraint firstAttribute="bottom" secondItem="zBY-j2-7Ld" secondAttribute="bottom" id="b0a-lt-oe0"/>
+                            <constraint firstItem="zBY-j2-7Ld" firstAttribute="bottom" secondItem="5GO-aU-ifh" secondAttribute="top" id="b0a-lt-oe0"/>
                             <constraint firstItem="zBY-j2-7Ld" firstAttribute="top" secondItem="Toa-3a-DLq" secondAttribute="bottom" id="dI7-aS-x5f"/>
                             <constraint firstItem="nct-Pv-Xsj" firstAttribute="height" secondItem="V9n-Hv-6ja" secondAttribute="height" multiplier="2:11" id="zZc-a0-pko"/>
                         </constraints>

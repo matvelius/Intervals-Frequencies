@@ -17,19 +17,20 @@ class IntervalsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     @IBAction func intervalSegmentedControl(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
-        case 0:
-            freq2 = freq1 / 9 / 8
-        case 1:
-            freq2 = freq1 * 4 / 5
-        case 2:
-            freq2 = freq1 * 3 / 4
-        case 3:
-            freq2 = freq1 * 2 / 3
-        case 5:
-            freq2 = freq1 * 3 / 5
-        case 6:
-            freq2 = freq1 * 8 / 9
-        case 7:
+
+        case 0: // 2nd
+            freq2 = freq1 * 9 / 8
+        case 1: // 3rd
+            freq2 = freq1 * 5 / 4
+        case 2: // 4th
+            freq2 = freq1 * 4 / 3
+        case 3: // 5th
+            freq2 = freq1 * 3 / 2
+        case 4: // 6th
+            freq2 = freq1 * 5 / 3
+        case 5: // 7th
+            freq2 = freq1 * 16 / 9 
+        case 6: // octave
             freq2 = freq1 * 2
         default:
             freq2 = freq1 * 2
@@ -93,7 +94,16 @@ class IntervalsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
 //            oscillator2.start()
 //            sender.setTitle("Stop \(Int(oscillator1.frequency))Hz & \(Int(oscillator2.frequency))Hz", for: .normal)
 //        }
-        
+//        let currentPlot = AKNodeOutputPlot(oscillator1)
+//        currentPlot.plotType = .rolling
+//
+////        plot.plotType = .buffer
+//        currentPlot.shouldFill = true
+//        currentPlot.shouldMirror = true
+//        currentPlot.color = UIColor.blue
+//        plot.addSubview(currentPlot)
+        plot.resume()
+//        audioOutputPlot.addSubview(plot)
         
     }
     
