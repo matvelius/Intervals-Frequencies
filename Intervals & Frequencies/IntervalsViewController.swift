@@ -18,7 +18,7 @@ class IntervalsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBAction func intervalSegmentedControl(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            freq2 = freq1 * 9 / 8
+            freq2 = freq1 / 9 / 8
         case 1:
             freq2 = freq1 * 4 / 5
         case 2:
