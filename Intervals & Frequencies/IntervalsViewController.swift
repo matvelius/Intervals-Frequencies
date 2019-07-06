@@ -53,7 +53,7 @@ class IntervalsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var intervalRatio: UILabel!
     
     
-    @IBOutlet weak var plot: AKNodeOutputPlot!
+    @IBOutlet var plot: AKNodeOutputPlot!
     
     var oscillator1 = AKOscillator()
     var oscillator2 = AKOscillator()
