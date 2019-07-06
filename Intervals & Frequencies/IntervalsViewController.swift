@@ -54,7 +54,7 @@ class IntervalsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         case 6: // 6th
             (a, b) = (5, 3)
         case 7: // 7th
-            (a, b) = (16, 9)
+            (a, b) = (15, 8)
         case 8: // octave
             (a, b) = (2, 1)
         default:
