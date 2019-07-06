@@ -87,26 +87,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="zBY-j2-7Ld" userLabel="UI Elements Stack">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="zBY-j2-7Ld" userLabel="UI Elements Stack">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starting Frequency:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zC-SU-L6x">
-                                        <rect key="frame" x="79" y="0.0" width="162" height="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starting Frequency:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8zC-SU-L6x">
+                                        <rect key="frame" x="79" y="0.0" width="162" height="52"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nct-Pv-Xsj">
-                                        <rect key="frame" x="0.0" y="56" width="320" height="103.5"/>
+                                        <rect key="frame" x="0.0" y="56" width="320" height="75.5"/>
                                     </pickerView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Interval:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRe-Lv-bSf">
-                                        <rect key="frame" x="93" y="190.5" width="134" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Interval:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xRe-Lv-bSf">
+                                        <rect key="frame" x="93" y="135.5" width="134" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="P4W-Uj-wUD">
-                                        <rect key="frame" x="0.0" y="245.5" width="320" height="29"/>
+                                        <rect key="frame" x="0.0" y="163.5" width="320" height="29"/>
                                         <segments>
                                             <segment title="OFF"/>
                                             <segment title="1"/>
@@ -123,20 +123,20 @@
                                         </connections>
                                     </segmentedControl>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oGx-ty-pcW" customClass="AKNodeOutputPlot" customModule="AudioKitUI">
-                                        <rect key="frame" x="0.0" y="304.5" width="320" height="55.5"/>
+                                        <rect key="frame" x="0.0" y="195.5" width="320" height="252.5"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="jJ9-df-2jT" userLabel="Interval Frequency Stack">
-                                        <rect key="frame" x="46" y="391" width="228" height="58"/>
+                                        <rect key="frame" x="46" y="452" width="228" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Interval Frequency:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cF-qz-LYy">
-                                                <rect key="frame" x="0.0" y="17" width="155.5" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="155.5" height="24"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jN-XB-KXq">
-                                                <rect key="frame" x="183.5" y="17" width="44.5" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1jN-XB-KXq">
+                                                <rect key="frame" x="183.5" y="0.0" width="44.5" height="24"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -165,9 +165,9 @@
                                     <constraint firstItem="nct-Pv-Xsj" firstAttribute="top" secondItem="zBY-j2-7Ld" secondAttribute="top" constant="56" id="07y-Pz-STh"/>
                                     <constraint firstItem="jJ9-df-2jT" firstAttribute="leading" secondItem="zBY-j2-7Ld" secondAttribute="leading" constant="46" id="4Ln-0c-d5G"/>
                                     <constraint firstAttribute="trailing" secondItem="P4W-Uj-wUD" secondAttribute="trailing" id="4Zm-id-ORV"/>
-                                    <constraint firstItem="xRe-Lv-bSf" firstAttribute="top" secondItem="nct-Pv-Xsj" secondAttribute="bottom" constant="31" id="6r0-HL-bQy"/>
                                     <constraint firstItem="xRe-Lv-bSf" firstAttribute="leading" secondItem="zBY-j2-7Ld" secondAttribute="leading" constant="93" id="K3L-35-pc4"/>
                                     <constraint firstItem="oGx-ty-pcW" firstAttribute="leading" secondItem="zBY-j2-7Ld" secondAttribute="leading" id="Kj1-KF-VGS"/>
+                                    <constraint firstItem="kd2-so-GNQ" firstAttribute="height" secondItem="jJ9-df-2jT" secondAttribute="height" id="OXy-ZL-Cl2"/>
                                     <constraint firstAttribute="trailing" secondItem="oGx-ty-pcW" secondAttribute="trailing" id="gGQ-wa-cgr"/>
                                     <constraint firstItem="P4W-Uj-wUD" firstAttribute="leading" secondItem="zBY-j2-7Ld" secondAttribute="leading" id="hiZ-qg-5EG"/>
                                     <constraint firstItem="nct-Pv-Xsj" firstAttribute="leading" secondItem="oGx-ty-pcW" secondAttribute="leading" id="iN6-Qh-SR4"/>
@@ -180,7 +180,7 @@
                             <constraint firstAttribute="trailing" secondItem="zBY-j2-7Ld" secondAttribute="trailing" id="7xw-kK-3Lk"/>
                             <constraint firstItem="zBY-j2-7Ld" firstAttribute="bottom" secondItem="5GO-aU-ifh" secondAttribute="top" id="b0a-lt-oe0"/>
                             <constraint firstItem="zBY-j2-7Ld" firstAttribute="top" secondItem="Toa-3a-DLq" secondAttribute="bottom" id="dI7-aS-x5f"/>
-                            <constraint firstItem="nct-Pv-Xsj" firstAttribute="height" secondItem="V9n-Hv-6ja" secondAttribute="height" multiplier="2:11" id="zZc-a0-pko"/>
+                            <constraint firstItem="nct-Pv-Xsj" firstAttribute="height" secondItem="V9n-Hv-6ja" secondAttribute="height" multiplier="2:15" id="zZc-a0-pko"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sound On" id="LVc-UX-rnk">

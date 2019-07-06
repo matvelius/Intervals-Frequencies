@@ -111,6 +111,8 @@ class IntervalsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         oscillator1.frequency = freq1
         oscillator1.start()
         
+        plot.color = AKColor.blue
+        
 //        if oscillator1.isPlaying {
 //            oscillator1.stop()
 //            oscillator2.stop()
