@@ -15,6 +15,10 @@ class IntervalsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     @IBOutlet weak var frequencyPicker: UIPickerView!
     
+    var ratio: Double = 1
+    var a: Double = 1
+    var b: Double = 1
+    
     @IBAction func intervalSegmentedControl(_ sender: UISegmentedControl) {
         oscillator2.stop()
         oscillator2.start()
@@ -23,26 +27,32 @@ class IntervalsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         case 0: // OFF
             oscillator2.stop()
+            (a, b) = (1, 1)
         case 1: // unison
-            freq2 = freq1
+            (a, b) = (1, 1)
         case 2: // 2nd
-            freq2 = freq1 * 9 / 8
+            (a, b) = (9, 8)
         case 3: // 3rd
-            freq2 = freq1 * 5 / 4
+            (a, b) = (5, 4)
         case 4: // 4th
-            freq2 = freq1 * 4 / 3
+            (a, b) = (4, 3)
         case 5: // 5th
-            freq2 = freq1 * 3 / 2
+            (a, b) = (3, 2)
         case 6: // 6th
-            freq2 = freq1 * 5 / 3
+            (a, b) = (5, 3)
         case 7: // 7th
-            freq2 = freq1 * 16 / 9 
+            (a, b) = (16, 9)
         case 8: // octave
-            freq2 = freq1 * 2
+            (a, b) = (2, 1)
         default:
-            freq2 = freq1 * 2
+            (a, b) = (1, 1)
         }
         
+        ratio = a/b
+        
+        intervalRatio.text = "\(Int(a))/\(Int(b))"
+        
+        freq2 = freq1 * ratio
         
         oscillator2.frequency = freq2
         
