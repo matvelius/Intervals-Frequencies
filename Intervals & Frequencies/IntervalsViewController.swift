@@ -16,29 +16,36 @@ class IntervalsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var frequencyPicker: UIPickerView!
     
     @IBAction func intervalSegmentedControl(_ sender: UISegmentedControl) {
+        oscillator2.stop()
+        oscillator2.start()
+        
         switch sender.selectedSegmentIndex {
-
-        case 0: // 2nd
+        
+        case 0: // OFF
+            oscillator2.stop()
+        case 1: // unison
+            freq2 = freq1
+        case 2: // 2nd
             freq2 = freq1 * 9 / 8
-        case 1: // 3rd
+        case 3: // 3rd
             freq2 = freq1 * 5 / 4
-        case 2: // 4th
+        case 4: // 4th
             freq2 = freq1 * 4 / 3
-        case 3: // 5th
+        case 5: // 5th
             freq2 = freq1 * 3 / 2
-        case 4: // 6th
+        case 6: // 6th
             freq2 = freq1 * 5 / 3
-        case 5: // 7th
+        case 7: // 7th
             freq2 = freq1 * 16 / 9 
-        case 6: // octave
+        case 8: // octave
             freq2 = freq1 * 2
         default:
             freq2 = freq1 * 2
         }
         
-        oscillator2.stop()
+        
         oscillator2.frequency = freq2
-        oscillator2.start()
+        
     }
     
     @IBOutlet weak var intervalFrequency: UILabel!
@@ -102,7 +109,7 @@ class IntervalsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
 //        currentPlot.shouldMirror = true
 //        currentPlot.color = UIColor.blue
 //        plot.addSubview(currentPlot)
-        plot.resume()
+//        plot.resume()
 //        audioOutputPlot.addSubview(plot)
         
     }

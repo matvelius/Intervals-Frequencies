@@ -105,16 +105,18 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="P4W-Uj-wUD">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="P4W-Uj-wUD">
                                         <rect key="frame" x="0.0" y="210.5" width="320" height="29"/>
                                         <segments>
-                                            <segment title="2nd"/>
-                                            <segment title="3rd"/>
-                                            <segment title="4th"/>
-                                            <segment title="5th"/>
-                                            <segment title="6th"/>
-                                            <segment title="7th"/>
-                                            <segment title="8th"/>
+                                            <segment title="OFF"/>
+                                            <segment title="1"/>
+                                            <segment title="2"/>
+                                            <segment title="3"/>
+                                            <segment title="4"/>
+                                            <segment title="5"/>
+                                            <segment title="6"/>
+                                            <segment title="7"/>
+                                            <segment title="8"/>
                                         </segments>
                                         <connections>
                                             <action selector="intervalSegmentedControl:" destination="teX-fR-JW0" eventType="valueChanged" id="fvr-Mj-1la"/>
