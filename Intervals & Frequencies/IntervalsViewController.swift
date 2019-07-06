@@ -12,6 +12,19 @@ import AudioKitUI
 
 class IntervalsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    @IBOutlet weak var soundSwitchOutlet: UIBarButtonItem!
+    
+    @IBAction func soundSwitchFlipped(_ sender: UISwitch) {
+        if sender.isOn {
+            freq2 = freq1
+            oscillator1.start()
+            oscillator2.start()
+        } else {
+            
+            oscillator1.stop()
+            oscillator2.stop()
+        }
+    }
     
     @IBOutlet weak var frequencyPicker: UIPickerView!
     
@@ -49,10 +62,10 @@ class IntervalsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
         
         ratio = a/b
-        
         intervalRatio.text = "\(Int(a))/\(Int(b))"
         
         freq2 = freq1 * ratio
+        intervalFrequency.text = "\(freq2)Hz"
         
         oscillator2.frequency = freq2
         

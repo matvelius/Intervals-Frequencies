@@ -12,4 +12,4 @@ import Foundation
 var frequencies = [""]
 
 var freq1: Double = 220
-var freq2: Double = 330
+var freq2: Double = 220
