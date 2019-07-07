@@ -127,10 +127,19 @@
                                             <action selector="intervalSegmentedControl:" destination="teX-fR-JW0" eventType="valueChanged" id="fvr-Mj-1la"/>
                                         </connections>
                                     </segmentedControl>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oGx-ty-pcW" customClass="AKNodeOutputPlot" customModule="AudioKitUI">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vvg-za-zsW">
                                         <rect key="frame" x="0.0" y="165" width="320" height="283"/>
-                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oGx-ty-pcW" customClass="AKNodeOutputPlot" customModule="AudioKitUI">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="141.5"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uAC-s5-hn0" customClass="EZAudioPlot">
+                                                <rect key="frame" x="0.0" y="141.5" width="320" height="141.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="jJ9-df-2jT" userLabel="Interval Frequency Stack">
                                         <rect key="frame" x="46" y="452" width="228" height="24"/>
                                         <subviews>
@@ -169,12 +178,12 @@
                                 <constraints>
                                     <constraint firstItem="jJ9-df-2jT" firstAttribute="leading" secondItem="zBY-j2-7Ld" secondAttribute="leading" constant="46" id="4Ln-0c-d5G"/>
                                     <constraint firstAttribute="trailing" secondItem="P4W-Uj-wUD" secondAttribute="trailing" id="4Zm-id-ORV"/>
+                                    <constraint firstAttribute="trailing" secondItem="vvg-za-zsW" secondAttribute="trailing" id="8Qj-n6-WU3"/>
                                     <constraint firstItem="8PR-b2-Pcw" firstAttribute="height" secondItem="zBY-j2-7Ld" secondAttribute="height" multiplier="1:5" id="BIR-bK-XAU"/>
                                     <constraint firstItem="xRe-Lv-bSf" firstAttribute="leading" secondItem="zBY-j2-7Ld" secondAttribute="leading" constant="93" id="K3L-35-pc4"/>
-                                    <constraint firstItem="oGx-ty-pcW" firstAttribute="leading" secondItem="zBY-j2-7Ld" secondAttribute="leading" id="Kj1-KF-VGS"/>
                                     <constraint firstItem="kd2-so-GNQ" firstAttribute="height" secondItem="jJ9-df-2jT" secondAttribute="height" id="OXy-ZL-Cl2"/>
-                                    <constraint firstAttribute="trailing" secondItem="oGx-ty-pcW" secondAttribute="trailing" id="gGQ-wa-cgr"/>
                                     <constraint firstItem="P4W-Uj-wUD" firstAttribute="leading" secondItem="zBY-j2-7Ld" secondAttribute="leading" id="hiZ-qg-5EG"/>
+                                    <constraint firstItem="vvg-za-zsW" firstAttribute="leading" secondItem="zBY-j2-7Ld" secondAttribute="leading" id="x3a-Kg-bGS"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -210,6 +219,7 @@
                         <outlet property="intervalRatio" destination="mFl-ej-WqG" id="Yrp-G1-xL1"/>
                         <outlet property="plot" destination="oGx-ty-pcW" id="rJ4-04-Igj"/>
                         <outlet property="soundSwitchOutlet" destination="DYp-FG-scl" id="KTy-bo-JQ8"/>
+                        <outlet property="spectrumPlotContainerView" destination="uAC-s5-hn0" id="Crj-pi-Pem"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q2S-Xf-A9q" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -65,7 +65,8 @@ class IntervalsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         intervalRatio.text = "\(Int(a))/\(Int(b))"
         
         freq2 = freq1 * ratio
-        intervalFrequency.text = "\(freq2)Hz"
+        let freq2String = String(format: "%.1f", freq2)
+        intervalFrequency.text = "\(freq2String)Hz"
         
         oscillator2.frequency = freq2
         
@@ -77,6 +78,9 @@ class IntervalsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     
     @IBOutlet var plot: AKNodeOutputPlot!
+
+    @IBOutlet weak var spectrumPlotContainerView: EZAudioPlot!
+    
     
     var oscillator1 = AKOscillator()
     var oscillator2 = AKOscillator()
@@ -113,6 +117,24 @@ class IntervalsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         plot.color = AKColor.blue
         
+//        setupPlot()
+        
+//        plot2.node = mixer
+        
+//        let spectrumPlot = AKNodeFFTPlot(mixer, frame: CGRect(x: 0, y: 0, width: 500, height: 500))
+        
+//        let spectrumPlot = AKNodeFFTPlot(
+//
+//        spectrumPlot.shouldFill = true
+//        spectrumPlot.shouldMirror = false
+//        spectrumPlot.shouldCenterYAxis = false
+//        spectrumPlot.color = UIColor.purple
+//
+//        spectrumPlotContainerView.addSubview(spectrumPlot)
+//
+//        plot2 = spectrumPlot
+//        plot2.color = AKColor.blue
+        
 //        if oscillator1.isPlaying {
 //            oscillator1.stop()
 //            oscillator2.stop()
@@ -139,13 +161,30 @@ class IntervalsViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
     }
     
+    func setupPlot() {
+        let plot = AKNodeOutputPlot(mixer, frame: spectrumPlotContainerView.bounds)
+        plot.translatesAutoresizingMaskIntoConstraints = false
+        plot.plotType = .rolling
+        plot.shouldFill = true
+        plot.shouldMirror = true
+        plot.color = UIColor.blue
+        spectrumPlotContainerView.addSubview(plot)
+        
+        // Pin the AKNodeOutputPlot to the audioInputPlot
+        var constraints = [plot.leadingAnchor.constraint(equalTo: spectrumPlotContainerView.leadingAnchor)]
+        constraints.append(plot.trailingAnchor.constraint(equalTo: spectrumPlotContainerView.trailingAnchor))
+        constraints.append(plot.topAnchor.constraint(equalTo: spectrumPlotContainerView.topAnchor))
+        constraints.append(plot.bottomAnchor.constraint(equalTo: spectrumPlotContainerView.bottomAnchor))
+        constraints.forEach { $0.isActive = true }
+    }
+    
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        print(frequencies)
+//        print(frequencies)
         return frequencies.count
     }
     

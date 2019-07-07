@@ -16,6 +16,8 @@ class FrequenciesViewController: UIViewController, UIPickerViewDelegate, UIPicke
     var freq2 = 330
 
     @IBOutlet var plot: AKNodeOutputPlot?
+    
+    
 
     var oscillator1 = AKOscillator()
     var oscillator2 = AKOscillator()
